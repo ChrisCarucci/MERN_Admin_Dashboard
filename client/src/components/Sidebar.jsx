@@ -104,6 +104,7 @@ const Sidebar = ({
   const navigate = useNavigate();
   const theme = useTheme();
 
+  {/* Anytime the pathname changes we change the URL to the new URL */}
   useEffect(() => {
     setActive(pathname.substring(1));
   }, [pathname]);
