@@ -5,12 +5,14 @@ import { useSelector } from "react-redux";
 import Navbar from "components/NavBar";
 import Sidebar from "components/Sidebar";
 
+
 const Layout = () => {
+  const isNonMobile = useMediaQuery("(min-width: 600px)");
 
 
 
   return (
-    <Box display= "flex" width="100%" height="100%">
+    <Box display={isNonMobile ? "flex" : "block"} width="100%" height="100%">
       <Sidebar
 
       />
