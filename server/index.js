@@ -12,9 +12,10 @@ import managementRoutes from "./routes/management.js";
 
 
 // Temp Data Imports
-
+import Product from "./models/Product.js"
+import ProductStat from "./models/ProductStat.js"
 import User from "./models/User.js";
-import { dataUser } from "./data/index.js"
+import { dataUser, dataProduct, dataProductStat } from "./data/index.js"
 
 // Configurations
 dotenv.config();
@@ -45,6 +46,8 @@ mongoose.connect(process.env.MONGO_URL, {
 
     // One Time Data Upload!
     // User.insertMany(dataUser)
+    Product.insertMany(dataProduct);
+    ProductStat.insertMany(dataProductStat);
 
 }).catch((error) => console.log(`Error Message: ${error.message}`))
 
