@@ -45,9 +45,9 @@ mongoose.connect(process.env.MONGO_URL, {
     app.listen(PORT, () => console.log(`Server Successfully Launched On Port: ${PORT}`))
 
     // One Time Data Upload!
-    // User.insertMany(dataUser)
-    Product.insertMany(dataProduct);
-    ProductStat.insertMany(dataProductStat);
+        // User.insertMany(dataUser)
+        // Product.insertMany(dataProduct);
+        // ProductStat.insertMany(dataProductStat);
 
 }).catch((error) => console.log(`Error Message: ${error.message}`))
 
