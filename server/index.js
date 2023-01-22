@@ -16,7 +16,15 @@ import salesRoutes from "./routes/sales.js";
 import Product from "./models/Product.js"
 import ProductStat from "./models/ProductStat.js"
 import User from "./models/User.js";
-import { dataUser, dataProduct, dataProductStat } from "./data/index.js"
+import Transaction from "./models/Transaction.js";
+import { 
+    dataUser,
+    dataProduct,
+    dataProductStat,
+    dataTransaction
+} from "./data/index.js"
+
+
 
 // Configurations
 dotenv.config();
@@ -34,7 +42,8 @@ app.use(cors());
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
-app.use("sales", salesRoutes);
+app.use("/sales", salesRoutes);
+
 
 
 // Mongoose Setup
@@ -50,6 +59,7 @@ mongoose.connect(process.env.MONGO_URL, {
         // User.insertMany(dataUser)
         // Product.insertMany(dataProduct);
         // ProductStat.insertMany(dataProductStat);
+        // Transaction.insertMany(dataTransaction);
 
 }).catch((error) => console.log(`Error Message: ${error.message}`))
 
