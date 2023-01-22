@@ -12,16 +12,20 @@ import salesRoutes from "./routes/sales.js";
 
 
 
+
 // Temp Data Imports
 import Product from "./models/Product.js"
 import ProductStat from "./models/ProductStat.js"
 import User from "./models/User.js";
 import Transaction from "./models/Transaction.js";
+import OverallStats from "./models/OverallStats.js";
+
 import { 
     dataUser,
     dataProduct,
     dataProductStat,
-    dataTransaction
+    dataTransaction,
+    dataOverallStat,
 } from "./data/index.js"
 
 
@@ -55,11 +59,12 @@ mongoose.connect(process.env.MONGO_URL, {
 }).then(() => {
     app.listen(PORT, () => console.log(`Server Successfully Launched On Port: ${PORT}`))
 
-    // One Time Data Upload!
+    // One Time Data Uploads!
         // User.insertMany(dataUser)
         // Product.insertMany(dataProduct);
         // ProductStat.insertMany(dataProductStat);
         // Transaction.insertMany(dataTransaction);
+        // OverallStats.insertMany(dataOverallStat)
 
 }).catch((error) => console.log(`Error Message: ${error.message}`))
 
