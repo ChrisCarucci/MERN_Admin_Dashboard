@@ -19,6 +19,7 @@ import ProductStat from "./models/ProductStat.js"
 import User from "./models/User.js";
 import Transaction from "./models/Transaction.js";
 import OverallStats from "./models/OverallStats.js";
+import AffiliateStat from "./models/AffiliateStat.js";
 
 import { 
     dataUser,
@@ -26,6 +27,7 @@ import {
     dataProductStat,
     dataTransaction,
     dataOverallStat,
+    dataAffiliateStat,
 } from "./data/index.js"
 
 
@@ -65,6 +67,7 @@ mongoose.connect(process.env.MONGO_URL, {
         // ProductStat.insertMany(dataProductStat);
         // Transaction.insertMany(dataTransaction);
         // OverallStats.insertMany(dataOverallStat)
+        // AffiliateStat.insertMany(dataAffiliateStat)
 
 }).catch((error) => console.log(`Error Message: ${error.message}`))
 

@@ -97,7 +97,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
             justify: false,
             translateX: isDashboard ? 20 : 0,
             translateY: isDashboard ? 50 : 56,
-            itemsSpacing: 0,
+            itemsSpacing: 30,
             itemWidth: 85,
             itemHeight: 18,
             itemTextColor: "#999",
