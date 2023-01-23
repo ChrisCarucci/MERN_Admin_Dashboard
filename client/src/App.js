@@ -10,8 +10,10 @@ import Products from "scenes/products";
 import Customers from "scenes/customers";
 import Transactions from "scenes/transactions";
 import Geography from "scenes/geography";
-import Overview from "scenes/overview.jsx";
-import Daily from "scenes/daily.js";
+import Overview from "scenes/overview/index.jsx";
+import Daily from "scenes/daily";
+import Breakdown from "scenes/breakdown";
+import Monthly from "scenes/monthly";
 
 
 
@@ -35,6 +37,7 @@ function App() {
               <Route path="/overview" element={<Overview />} />
               <Route path="/daily" element={<Daily />} />
               <Route path="/monthly" element={<Monthly />} />
+              <Route path="/breakdown" element={<Breakdown />} />
             </Route>
           </Routes>
         </ThemeProvider>
